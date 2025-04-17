@@ -9,6 +9,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root::-webkit-scrollbar {
+  scrollbar-width: none; 
+}
+
 html {
   overflow-x: hidden;
 }

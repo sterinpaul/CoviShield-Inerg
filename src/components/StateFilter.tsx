@@ -83,11 +83,11 @@ const StateFilter: React.FC = () => {
 
     return (
         <div className="w-full mb-6">
-            <div className='w-100 m-auto flex items-center gap-2'>
+            <div className='m-auto flex items-center justify-center gap-2'>
                 <label className='text-nowrap'>Choose State:</label>
                 <Select
                     showSearch
-                    className='w-full'
+                    className='w-100'
                     defaultValue={"All States"}
                     placeholder="Select State"
                     optionFilterProp="label"

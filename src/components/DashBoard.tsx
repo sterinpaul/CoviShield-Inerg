@@ -20,12 +20,13 @@ export function DashBoard() {
         style={{
           padding: 24,
           minHeight: '100vh',
+          marginTop: '5rem',
           background: colorBgContainer,
           borderRadius: borderRadiusLG,
         }}
       >
         <blockquote className="pl-4 text-amber-950 font-bold text-xl">Wondering how your state is doing in the fight against COVID-19 ?</blockquote>
-        <p className="my-6 indent-12">Stay informed with real-time data on <span className="font-bold">COVID-19</span> cases across Indian states. This interactive dashboard visualizes key statistics including total cases, active cases, recoveries, and deaths, state by state. With an easy-to-use map interface and state-wise filtering, users can quickly view current trends and hotspot regions. This tool provides a clear and accessible overview of the pandemic situation in India.</p>
+        <p className="my-6 indent-12 text-justify">Stay informed with real-time data on <span className="font-bold">COVID-19</span> cases across Indian states. This interactive dashboard visualizes key statistics including total cases, active cases, recoveries, and deaths, state by state. With an easy-to-use map interface and state-wise filtering, users can quickly view current trends and hotspot regions. This tool provides a clear and accessible overview of the pandemic situation in India.</p>
         
         <StateFilter />
 

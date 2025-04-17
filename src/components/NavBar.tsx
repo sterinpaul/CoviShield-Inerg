@@ -21,7 +21,7 @@ export function NavBar() {
                     <span className="h-12 w-12">
                         <img src="/covid.png" alt="Logo" />
                     </span>
-                    <p className="font-bold text-fuchsia-50 text-4xl text-shadow-2xs text-shadow-emerald-800">India COVID-19</p>
+                    <p className="font-bold text-fuchsia-50 md:text-4xl text-2xl text-nowrap text-shadow-2xs text-shadow-emerald-800">India COVID-19</p>
                 </div>
                 <h1 className="lg:text-9xl tracking-widest font-extrabold bg-gradient-to-r from-blue-300 to-blue-400 bg-clip-text text-transparent h-50 w-auto text-nowrap">COVID</h1>
             </div>
