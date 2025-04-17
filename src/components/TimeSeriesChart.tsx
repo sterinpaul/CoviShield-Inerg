@@ -6,6 +6,7 @@ import { RootState } from '../types';
 const TimeSeriesChart: React.FC = () => {
     const { currentData, selectedState } = useSelector((state: RootState) => state.covid);
 
+    // Assigning covid data to graph
     const traces = [
         {
             name: 'Total Cases',

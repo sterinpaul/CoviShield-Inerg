@@ -6,6 +6,7 @@ import { RootState } from '../types';
 const PieChart: React.FC = () => {
     const { currentData } = useSelector((state: RootState) => state.covid);
 
+    // Finding the total covid cases
     const totalStats = currentData.reduce(
         (acc, curr) => ({
             active: acc.active + curr.activeCases,
@@ -15,6 +16,7 @@ const PieChart: React.FC = () => {
         { active: 0, recovered: 0, deaths: 0 }
     );
 
+    // Assign values to Pie diagram
     const pieData = [
         {
             values: [totalStats.active, totalStats.recovered, totalStats.deaths],
