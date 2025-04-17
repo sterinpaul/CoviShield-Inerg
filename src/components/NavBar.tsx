@@ -5,9 +5,9 @@ export function NavBar() {
     return (
         <Header
             style={{
-                position: 'sticky',
+                position: 'fixed',
                 top: 0,
-                zIndex: 100,
+                zIndex: 1500,
                 width: '100vw',
                 height: '5rem',
                 display: 'flex',

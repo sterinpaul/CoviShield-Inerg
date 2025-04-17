@@ -24,10 +24,10 @@ const StateFilter: React.FC = () => {
     // Handler for choosing a state
     const handleSelectState = (value: string) => {
         setPage(1)
+        dispatch(setSelectedState(value))
         if (value === 'All States') {
             dispatch(setCurrentCovidData(data))
         } else {
-            dispatch(setSelectedState(value))
             dispatch(setCurrentCovidData(data.filter(({ state }) => state === value)))
         }
     }
@@ -95,7 +95,6 @@ const StateFilter: React.FC = () => {
                     options={states}
                     suffixIcon={<SearchOutlined />}
                 />
-
             </div>
             <div className='mt-8 overflow-x-scroll shadow-xl no-scrollbar'>
                 <Table<DataType>
