@@ -18,7 +18,7 @@ interface DataType {
 const StateFilter: React.FC = () => {
     const dispatch = useDispatch();
     const [page, setPage] = useState(1)
-    const { data, currentData } = useSelector((state: RootState) => state.covid);
+    const { data, currentData, loading } = useSelector((state: RootState) => state.covid);
     const states = [{ value: 'All States', label: 'All States' }, ...data.map(({ state }) => ({ label: state, value: state }))];
 
     // Handler for choosing a state
@@ -103,6 +103,7 @@ const StateFilter: React.FC = () => {
                     rowKey="id"
                     tableLayout="auto"
                     size="middle"
+                    loading={loading}
                     columns={columns}
                     dataSource={currentData}
                     showSorterTooltip={{ target: 'sorter-icon' }}

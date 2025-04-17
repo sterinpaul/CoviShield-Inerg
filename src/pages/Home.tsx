@@ -4,7 +4,7 @@ import Layout, { Footer } from "antd/es/layout/layout"
 import { useDispatch } from "react-redux"
 import { useEffect } from "react"
 import baseURL from "../api/baseUrl"
-import { setCovidData, setCurrentCovidData } from "../redux/covidSlice"
+import { setCovidData, setCurrentCovidData, setLoadingState } from "../redux/covidSlice"
 import jsonData from "../assets/data.json";
 
 const covidData = jsonData.covidData;
@@ -65,6 +65,8 @@ const Home = () => {
             const data = structureData(covidData as RawCovidDataRow[]);
             dispatch(setCovidData(data));
             dispatch(setCurrentCovidData(data));
+        } finally {
+            dispatch(setLoadingState(false))
         }
     };
 

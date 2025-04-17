@@ -5,14 +5,18 @@ interface CovidState {
   data: CovidData[];
   currentData: CovidData[];
   selectedState: string;
+  loading: boolean;
 }
 
+// Initial state of redux
 const initialState: CovidState = {
   data: [],
   currentData:[],
   selectedState: 'All States',
+  loading: true
 };
 
+// Redux slice
 const covidSlice = createSlice({
   name: 'covid',
   initialState,
@@ -25,9 +29,12 @@ const covidSlice = createSlice({
     },
     setSelectedState: (state, action: PayloadAction<string>) => {
       state.selectedState = action.payload;
+    },
+    setLoadingState: (state, action: PayloadAction<boolean>) => {
+      state.loading = action.payload;
     }
-  },
+  }
 });
 
-export const { setCovidData, setCurrentCovidData, setSelectedState } = covidSlice.actions;
+export const { setCovidData, setCurrentCovidData, setSelectedState, setLoadingState } = covidSlice.actions;
 export default covidSlice.reducer;
